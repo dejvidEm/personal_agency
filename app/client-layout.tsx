@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import ScrollToTop from "@/components/scroll-to-top"
-import { useEffect } from "react"
+import { Suspense, useEffect } from "react"
 
 export default function ClientLayout({
   children,
@@ -23,7 +23,9 @@ export default function ClientLayout({
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
       <div className="flex min-h-screen flex-col">
         <Navbar />
-        <ScrollToTop />
+        <Suspense fallback={null}>
+          <ScrollToTop />
+        </Suspense>
         <main className="flex-1">{children}</main>
         <Footer />
       </div>
