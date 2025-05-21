@@ -30,7 +30,7 @@ export default function Home() {
                 <span className="relative inline-block">
                   zmenu
                   <svg
-                    className="absolute -bottom-2 left-0 w-full"
+                    className="absolute sm:-bottom-2 -bottom-0 left-0 w-full"
                     viewBox="0 0 200 12"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ export default function Home() {
                 Nie sme personálna agentúra – ale dodáme vám pracovníkov rýchlo, flexibilne a férovo.
               </p>
 
-              <div className="flex items-center space-x-6">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0 space-x-6">
                 <div className="flex -space-x-4">
                   <Image
                     src="/professional-woman-portrait.png"
